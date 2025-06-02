@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VehiclePro - Marketplace B2B de Véhicules Professionnels</title>
+    <link rel="stylesheet" href="product-detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- En-tête -->
+    <header>
+        <div class="container">
+            <div class="nav-left">
+                <div class="logo">
+                    <i class="fas fa-truck"></i>
+                    <span>VehiclePro</span>
+                </div>
+                <nav class="main-nav">
+                    <a href="#" class="nav-link active">
+                        <i class="fas fa-home"></i>
+                        Accueil
+                    </a>
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-car"></i>
+                        Voitures
+                    </a>
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-truck"></i>
+                        Utilitaires
+                    </a>
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-truck-moving"></i>
+                        Poids Lourds
+                    </a>
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-tag"></i>
+                        Occasions
+                    </a>
+                </nav>
+            </div>
+            <div class="nav-right">
+                <div class="search-nav">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Rechercher...">
+                </div>
+                <button class="btn-connexion" onclick="openLoginModal()">
+                    <i class="fas fa-user"></i>
+                    Connexion
+                </button>
+                <button class="btn-inscrire" onclick="openRegisterModal()">
+                    S'inscrire
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section Hero avec recherche -->
+    <section class="hero-search">
+        <div class="container">
+            <div class="search-section">
+                <h2>Que recherchez-vous ?</h2>
+                <div class="search-form">
+                    <div class="search-input-group">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Ex: Renault Master, Mercedes Sprinter...">
+                    </div>
+                    <div class="search-filters">
+                        <div class="filter-group">
+                            <label>Catégorie</label>
+                            <select>
+                                <option>Toutes catégories</option>
+                                <option>Voitures</option>
+                                <option>Utilitaires</option>
+                                <option>Poids lourds</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label>État</label>
+                            <select>
+                                <option>Neuf et occasion</option>
+                                <option>Neuf</option>
+                                <option>Occasion</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="btn-search">
+                        <i class="fas fa-search"></i>
+                        Rechercher
+                    </button>
+                </div>
+            </div>
+
+            <!-- Section Statistiques -->
+            <div class="stats-section">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <div class="stat-number">50,000+</div>
+                    <div class="stat-label">Véhicules disponibles</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-number">15,000+</div>
+                    <div class="stat-label">Professionnels actifs</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="stat-number">200,000+</div>
+                    <div class="stat-label">Transactions réussies</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Garantie qualité</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Véhicules -->
+    <section class="vehicles">
+        <div class="container">
+            <h2>Véhicules Professionnels Disponibles</h2>
+            <p class="section-description">Découvrez notre sélection de véhicules professionnels vérifiés, adaptés à tous vos besoins d'entreprise.</p>
+            
+            <div class="filter-tabs">
+                <button class="tab active">Tous les véhicules (6)</button>
+                <button class="tab">Voitures (1)</button>
+                <button class="tab">Utilitaires (4)</button>
+                <button class="tab">Poids lourds (1)</button>
+            </div>
+            
+            <div class="filter-badges">
+                <span class="badge">Véhicules neufs (1)</span>
+                <button class="btn-outline">Filtres avancés</button>
+            </div>
+            
+            <div class="vehicles-grid">
+                <!-- Véhicule 1 -->
+                <div class="vehicle-card">
+                    <div class="vehicle-image">
+                        <img src="https://via.placeholder.com/400x300" alt="Renault Master L2H2">
+                        <div class="brand-badge">Renault Pro+</div>
+                    </div>
+                    <div class="vehicle-details">
+                        <h3>Renault Master L2H2 Grand Confort</h3>
+                        <div class="price">35 900 €</div>
+                        <div class="location">Paris, France</div>
+                        <div class="specs">
+                            <span>2022</span>
+                            <span>25 000 km</span>
+                            <span>Diesel</span>
+                        </div>
+                        <div class="actions">
+                            <button class="btn-secondary" onclick="openVehicleModal('renault-master')">Voir détails</button>
+                            <button class="btn-primary">Contacter</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Véhicule 2 -->
+                <div class="vehicle-card">
+                    <div class="vehicle-image">
+                        <img src="https://via.placeholder.com/400x300" alt="Mercedes Sprinter">
+                        <div class="brand-badge">Mercedes Pro</div>
+                    </div>
+                    <div class="vehicle-details">
+                        <h3>Mercedes Sprinter 319 CDI</h3>
+                        <div class="price">42 500 €</div>
+                        <div class="location">Lyon, France</div>
+                        <div class="specs">
+                            <span>2023</span>
+                            <span>12 000 km</span>
+                            <span>Diesel</span>
+                        </div>
+                        <div class="actions">
+                            <button class="btn-secondary" onclick="openVehicleModal('mercedes-sprinter')">Voir détails</button>
+                            <button class="btn-primary">Contacter</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Véhicule 3 -->
+                <div class="vehicle-card">
+                    <div class="vehicle-image">
+                        <img src="https://via.placeholder.com/400x300" alt="Volkswagen Crafter">
+                        <div class="brand-badge">Volkswagen Utilitaires</div>
+                        <div class="new-badge">Neuf</div>
+                    </div>
+                    <div class="vehicle-details">
+                        <h3>Volkswagen Crafter 35 TDI</h3>
+                        <div class="price">38 900 €</div>
+                        <div class="location">Marseille, France</div>
+                        <div class="specs">
+                            <span>2024</span>
+                            <span>0 km</span>
+                            <span>Diesel</span>
+                        </div>
+                        <div class="actions">
+                            <button class="btn-secondary" onclick="openVehicleModal('volkswagen-crafter')">Voir détails</button>
+                            <button class="btn-primary">Contacter</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Véhicule 4 -->
+                <div class="vehicle-card">
+                    <div class="vehicle-image">
+                        <img src="https://via.placeholder.com/400x300" alt="Peugeot Boxer">
+                        <div class="brand-badge">Peugeot Professionnel</div>
+                    </div>
+                    <div class="vehicle-details">
+                        <h3>Peugeot Boxer L3H2 Premium</h3>
+                        <div class="price">33 500 €</div>
+                        <div class="location">Toulouse, France</div>
+                        <div class="specs">
+                            <span>2022</span>
+                            <span>35 000 km</span>
+                            <span>Diesel</span>
+                        </div>
+                        <div class="actions">
+                            <button class="btn-secondary" onclick="openVehicleModal('peugeot-boxer')">Voir détails</button>
+                            <button class="btn-primary">Contacter</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Véhicule 5 -->
+                <div class="vehicle-card">
+                    <div class="vehicle-image">
+                        <img src="https://via.placeholder.com/400x300" alt="Mercedes Actros">
+                        <div class="brand-badge">Mercedes Trucks</div>
+                    </div>
+                    <div class="vehicle-details">
+                        <h3>Mercedes Actros 1845 LS</h3>
+                        <div class="price">89 900 €</div>
+                        <div class="location">Lille, France</div>
+                        <div class="specs">
+                            <span>2021</span>
+                            <span>150 000 km</span>
+                            <span>Diesel</span>
+                        </div>
+                        <div class="actions">
+                            <button class="btn-secondary" onclick="openVehicleModal('mercedes-actros')">Voir détails</button>
+                            <button class="btn-primary">Contacter</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Véhicule 6 -->
+                <div class="vehicle-card">
+                    <div class="vehicle-image">
+                        <img src="https://via.placeholder.com/400x300" alt="BMW 320d">
+                        <div class="brand-badge">BMW Business</div>
+                    </div>
+                    <div class="vehicle-details">
+                        <h3>BMW 320d Berline Business</h3>
+                        <div class="price">28 500 €</div>
+                        <div class="location">Nice, France</div>
+                        <div class="specs">
+                            <span>2021</span>
+                            <span>45 000 km</span>
+                            <span>Diesel</span>
+                        </div>
+                        <div class="actions">
+                            <button class="btn-secondary" onclick="openVehicleModal('bmw-320d')">Voir détails</button>
+                            <button class="btn-primary">Contacter</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="load-more">
+                <button class="btn-outline">Voir plus de véhicules</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pied de page -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h2>VehiclePro</h2>
+                    <p>La plateforme B2B de référence pour l'achat et la vente de véhicules professionnels. Trouvez le véhicule adapté à vos besoins professionnels.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Catégories</h3>
+                    <ul>
+                        <li><a href="#">Voitures</a></li>
+                        <li><a href="#">Utilitaires</a></li>
+                        <li><a href="#">Poids Lourds</a></li>
+                        <li><a href="#">Véhicules d'occasion</a></li>
+                        <li><a href="#">Véhicules neufs</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Financement</a></li>
+                        <li><a href="#">Assurance</a></li>
+                        <li><a href="#">Garantie</a></li>
+                        <li><a href="#">Service après-vente</a></li>
+                        <li><a href="#">Support technique</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <p>+33 1 23 45 67 89</p>
+                    <p>contact@vehiclepro.fr</p>
+                    <p>Paris, France</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2024 VehiclePro. Tous droits réservés.</p>
+                <div class="footer-legal">
+                    <a href="#">Conditions d'utilisation</a>
+                    <a href="#">Politique de confidentialité</a>
+                    <a href="#">Mentions légales</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Détails Véhicule -->
+    <div id="vehicleModal" class="modal">
+        <div class="modal-content vehicle-modal">
+            <div class="modal-header">
+                <h2 id="vehicleTitle">Renault Master L2H2 Grand Confort</h2>
+                <span class="close" onclick="closeModal('vehicleModal')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="vehicle-detail-content">
+                    <div class="vehicle-detail-image">
+                        <img src="https://via.placeholder.com/400x300" alt="Véhicule" id="vehicleDetailImage">
+                    </div>
+                    <div class="vehicle-detail-info">
+                        <div class="price-section">
+                            <div class="price-large" id="vehiclePrice">35 900 €</div>
+                            <div class="vehicle-meta">
+                                <div class="meta-item">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>Année</span>
+                                    <strong id="vehicleYear">2022</strong>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                    <span>Kilométrage</span>
+                                    <strong id="vehicleKm">25 000 km</strong>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fas fa-gas-pump"></i>
+                                    <span>Carburant</span>
+                                    <strong id="vehicleFuel">Diesel</strong>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Localisation</span>
+                                    <strong id="vehicleLocation">Paris, France</strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="guarantees">
+                            <div class="guarantee-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Garantie incluse</span>
+                                <small>2 ans / 100 000 km</small>
+                            </div>
+                            <div class="guarantee-item">
+                                <i class="fas fa-credit-card"></i>
+                                <span>Financement disponible</span>
+                                <small>À partir de 299€/mois</small>
+                            </div>
+                        </div>
+
+                        <div class="description-section">
+                            <h3>Description</h3>
+                            <p>Véhicule professionnel en excellent état, entretien régulier effectué sans concession. Idéal pour les entreprises nécessitant un véhicule fiable et économique.</p>
+                        </div>
+
+                        <div class="characteristics">
+                            <h3>Caractéristiques</h3>
+                            <div class="char-grid">
+                                <div class="char-item">
+                                    <span>Puissance:</span>
+                                    <strong>150 CV</strong>
+                                </div>
+                                <div class="char-item">
+                                    <span>Transmission:</span>
+                                    <strong>Manuelle</strong>
+                                </div>
+                                <div class="char-item">
+                                    <span>Couleur:</span>
+                                    <strong>Blanc</strong>
+                                </div>
+                                <div class="char-item">
+                                    <span>Nb Places:</span>
+                                    <strong>3</strong>
+                                </div>
+                                <div class="char-item">
+                                    <span>Coffre:</span>
+                                    <strong>500L</strong>
+                                </div>
+                                <div class="char-item">
+                                    <span>Norme Euro:</span>
+                                    <strong>Euro 6</strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="supplier-section">
+                            <div class="supplier-header">
+                                <i class="fas fa-store"></i>
+                                <span>Fournisseur</span>
+                            </div>
+                            <div class="supplier-info">
+                                <h4>Renault Pro+</h4>
+                                <div class="rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span>4.8/5 (127 avis)</span>
+                                </div>
+                                <div class="supplier-contact">
+                                    <p><i class="fas fa-phone"></i> +33 1 23 45 67 89</p>
+                                    <p><i class="fas fa-envelope"></i> contact@concessionnaire.fr</p>
+                                    <p><i class="fas fa-map-marker-alt"></i> 123 Avenue des Professionnels, 75001 Paris</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="action-buttons">
+                            <button class="btn-contact-seller">
+                                <i class="fas fa-phone"></i>
+                                Contacter le vendeur
+                            </button>
+                            <button class="btn-send-message">
+                                <i class="fas fa-envelope"></i>
+                                Envoyer un message
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Connexion -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content auth-modal">
+            <div class="modal-header">
+                <h2>Connexion</h2>
+                <span class="close" onclick="closeModal('loginModal')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form class="auth-form">
+                    <div class="form-group">
+                        <label>Email professionnel</label>
+                        <div class="input-group">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" placeholder="votre@entreprise.com">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Mot de passe</label>
+                        <div class="input-group">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" placeholder="••••••••">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-auth">Se connecter</button>
+                    <p class="auth-switch">
+                        Pas encore de compte ? <a href="#" onclick="switchToRegister()">S'inscrire</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Inscription -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content auth-modal">
+            <div class="modal-header">
+                <h2>Inscription</h2>
+                <span class="close" onclick="closeModal('registerModal')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form class="auth-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Prénom</label>
+                            <div class="input-group">
+                                <i class="fas fa-user"></i>
+                                <input type="text" placeholder="Votre prénom">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Nom</label>
+                            <div class="input-group">
+                                <i class="fas fa-user"></i>
+                                <input type="text" placeholder="Votre nom">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Email professionnel</label>
+                        <div class="input-group">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" placeholder="votre@entreprise.com">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Entreprise</label>
+                        <div class="input-group">
+                            <i class="fas fa-building"></i>
+                            <input type="text" placeholder="Nom de votre entreprise">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Téléphone</label>
+                        <div class="input-group">
+                            <i class="fas fa-phone"></i>
+                            <input type="tel" placeholder="+33 1 23 45 67 89">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Mot de passe</label>
+                        <div class="input-group">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" placeholder="••••••••">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Confirmer le mot de passe</label>
+                        <div class="input-group">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" placeholder="••••••••">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-auth">Créer mon compte</button>
+                    <p class="auth-switch">
+                        Déjà un compte ? <a href="#" onclick="switchToLogin()">Se connecter</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
